@@ -2,18 +2,6 @@ from typing import List
 from pydantic import BaseModel, Field
 
 
-class BudgetPlan(BaseModel):
-    """
-    Structured budget breakdown for the trip.
-    """
-
-    hotel: int = Field(description="Estimated hotel cost in INR")
-    food: int = Field(description="Estimated food cost in INR")
-    transport: int = Field(description="Estimated transport cost in INR")
-    activities: int = Field(description="Estimated activities cost in INR")
-    total: int = Field(description="Total estimated trip cost in INR")
-
-
 class Hotel(BaseModel):
     """
     Hotel recommendation.
