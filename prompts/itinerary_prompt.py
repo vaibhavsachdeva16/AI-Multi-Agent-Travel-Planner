@@ -56,6 +56,8 @@ Rules:
 - Do NOT modify any budget values.
 - Keep the itinerary within the provided budget.
 - Keep descriptions concise and practical.
+- The response must contain only the day-wise itinerary.
+- Do not generate any content after the final day's Evening section.
 
 Format the itinerary in Markdown exactly like this:
 
@@ -72,17 +74,11 @@ Format the itinerary in Markdown exactly like this:
 
 Repeat for every day.
 
-Finish with:
+End the itinerary after the Evening plan of the final day.
 
-# Trip Summary
+Do NOT generate any trip summary, budget summary, weather summary, transport summary, hotel summary, travel tips, conclusion, or additional sections after the last day.
 
-Include ONLY:
-
-- Selected Hotel
-- Selected Transport
-- Weather Summary
-- Budget Breakdown
-- Important Travel Tips
+The trip summary is displayed separately in the application UI.
 
 Use the provided budget values exactly without recalculating them.
 """
